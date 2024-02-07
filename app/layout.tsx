@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className}, min-h-screen pt-12 2xl:pl-12 2xl:pr-12 sm:pl-6 sm:pt-8 bg-[url('/banner-bg.png')] bg-no-repeat bg-cover`}>
+        {children}
+      </body>
     </html>
   );
 }

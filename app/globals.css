@@ -31,3 +31,35 @@ body {
     text-wrap: balance;
   }
 }
+
+.hard_center_icon {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translate(-50%,-50%);
+}
+
+.banner_text_bg{
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@keyframes upDownBanner{
+  0%{
+    transform: translateY(-20px);
+  }
+  50%{
+    transform: translateY(20px);
+  }
+  100%{
+    transform: translateY(-20px);
+  }
+}
+
+.banner_img{
+  animation : upDownBanner 3s linear infinite;
+}
+
+.skill_box_width{
+  width: 800px;
+}
