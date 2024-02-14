@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,8 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}, min-h-screen pt-12 2xl:pl-12 2xl:pr-12 sm:pl-6 sm:pt-8 bg-[url('/banner-bg.png')] bg-no-repeat bg-cover`}>
-        {children}
+      <body className={`${inter.className}`}>
+        <div className="  pt-12 2xl:pl-12 2xl:pr-12 sm:pl-6 sm:pt-8 bg-[url('/banner-bg.png')] bg-no-repeat bg-cover  min-h-screen">
+          <Navbar />
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
