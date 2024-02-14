@@ -78,7 +78,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="w-8 h-8 bg-slate-500 rounded-full relative cursor-pointer">
-              <BiLogoLinkedin className="absolute hard_center_icon" />
+              <Link href={"https://www.linkedin.com/in/trung-dang-nguyen-7035a52b4/"}>
+                <BiLogoLinkedin className="absolute hard_center_icon" />
+              </Link>
             </li>
           </ul>
           <div className="right-0">
