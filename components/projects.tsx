@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import "animate.css";
+import { useRouter } from "next/navigation";
 
 const dataProject = [
   {
@@ -15,6 +16,7 @@ const dataProject = [
       "/tech-icons/JavaScript.svg",
     ],
     source: "https://github.com/trungcrbay/Real-Madrid",
+    demo: "https://trungcrbay.github.io/Real-Madrid/",
   },
   {
     img: "/project2.jpg",
@@ -30,6 +32,7 @@ const dataProject = [
       "/tech-icons/Sass.svg",
     ],
     source: "https://github.com/trungcrbay/React_ANTD_ECOMMERCE",
+    demo: "https://react-antd-ecommerce.vercel.app/",
   },
   {
     img: "/project3.jpg",
@@ -42,6 +45,7 @@ const dataProject = [
       "/tech-icons/Sass.svg",
     ],
     source: "https://github.com/trungcrbay/QuizApp",
+    demo: "https://quiz-app-9x73.vercel.app/",
   },
   {
     img: "/project4.jpg",
@@ -57,6 +61,7 @@ const dataProject = [
       "/tech-icons/Javascript.svg",
     ],
     source: "https://github.com/trungcrbay/Ecomerce-PHP",
+    demo: "https://quiz-app-9x73.vercel.app/",
   },
   {
     img: "/project5.jpg",
@@ -69,10 +74,13 @@ const dataProject = [
       "/tech-icons/CSS3.svg",
     ],
     source: "https://github.com/trungcrbay/porfolio",
+    demo: "https://quiz-app-9x73.vercel.app/",
   },
 ];
 
 const Projects = () => {
+  const router = useRouter();
+
   return (
     <>
       <div className="grid 2xl:grid-cols-12 gap-4">
@@ -88,9 +96,14 @@ const Projects = () => {
                   sizes="100vw"
                   className="w-1/2 sm:w-full myDIV h-auto rounded-lg object-cover hover:opacity-60 cursor-pointer"
                 />
-                <button className="mt-2 animate__animated animate__bounceIn center-button-hover hover:block hide sm:block sm:static text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+
+                <button
+                  onClick={() => router.push(`${data.demo}`)}
+                  className="mt-2 animate__animated animate__bounceIn center-button-hover hover:block hide sm:block sm:static text-white bg-blue-700  hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                >
                   View Demo
                 </button>
+
                 <div>
                   <h2 className="text-3xl sm:text-xl">{data.title}</h2>
                   <p className="text-slate-300 mt-2 sm:text-xs">

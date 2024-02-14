@@ -6,6 +6,9 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
+import { BiHome } from "react-icons/bi";
+import { BiSolidUser } from "react-icons/bi";
+import { BiCube } from "react-icons/bi";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState<boolean>(false);
@@ -78,7 +81,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="w-8 h-8 bg-slate-500 rounded-full relative cursor-pointer">
-              <Link href={"https://www.linkedin.com/in/trung-dang-nguyen-7035a52b4/"}>
+              <Link
+                href={
+                  "https://www.linkedin.com/in/trung-dang-nguyen-7035a52b4/"
+                }
+              >
                 <BiLogoLinkedin className="absolute hard_center_icon" />
               </Link>
             </li>
@@ -91,32 +98,31 @@ const Navbar = () => {
         </div>
       </nav>
       {openNav && (
-        <div className="pl-0 pt-0 bg-white fixed top-0 w-60 right-0 h-screen z-50">
+        <div className="pl-0 pt-0 bg-white fixed top-0 w-40 right-0 h-screen z-50">
           <IoMdClose
             className="right-2 top-2 absolute w-8 h-8"
             onClick={() => setOpenNav(false)}
           />
-          <ul className="list-none flex flex-col gap-12 text-slate-400">
+          <ul className="list-none flex flex-col gap-12 text-slate-400 ml-4">
             <li className="mt-10">
-              <button>Home</button>
+              <Link href={"/"} className="flex items-center gap-2">
+                <BiHome />
+                <button>Home</button>
+              </Link>
             </li>
-            <li>
-              <button>Skills</button>
+
+            <li className="">
+              <Link href={"/contact"} className="flex items-center gap-2">
+                <BiSolidUser />
+                <button>About me</button>
+              </Link>
             </li>
-            <li>
-              <button>Projects</button>
-            </li>
-          </ul>
-          <p>Socials</p>
-          <ul className="list-none flex gap-12 text-slate-400">
-            <li className="w-8 h-8 bg-red-300 rounded-full">
-              <BiLogoFacebook />
-            </li>
-            <li>
-              <BiLogoGithub />
-            </li>
-            <li>
-              <BiLogoLinkedin />
+
+            <li className="">
+              <Link href={"/projects"} className=" flex items-center gap-2">
+                <BiCube />
+                <button>Projects</button>
+              </Link>
             </li>
           </ul>
         </div>
