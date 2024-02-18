@@ -1,10 +1,11 @@
-import Contact from "@/components/contact";
-import Link from "next/link";
+import WrapperContactPage from "@/components/wrapper-contact";
+
+
 const ContactPage = () => {
   return (
-    <div className="min-h-screen">
-      <Contact />
-    </div>
+    <>
+      <WrapperContactPage />
+    </>
   );
 };
 

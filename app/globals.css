@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb      : 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --color-social-icon: #cea350;
+  --background-end-rgb  : 255, 255, 255;
+  --color-social-icon   : #cea350;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb      : 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-end-rgb  : 0, 0, 0;
   }
 }
 
@@ -31,21 +31,21 @@ body {
 }
 
 .hard_center_icon {
-  position: absolute;
-  left: 50%;
-  top: 30%;
+  position : absolute;
+  left     : 50%;
+  top      : 30%;
   transform: translate(-50%, -5%);
 }
 
 .center-button-hover {
   position: absolute;
-  top: 50%;
-  left: 18%;
+  top     : 50%;
+  left    : 18%;
 }
 
 .banner_text_bg {
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border    : 1px solid rgba(255, 255, 255, 0.5);
 }
 
 @keyframes upDownBanner {
@@ -77,17 +77,17 @@ body {
 }
 
 .highlight_text {
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #FFCC70 66%, #ffffff 100%);
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
+  background-color       : #4158D0;
+  background-image       : linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #FFCC70 66%, #ffffff 100%);
+  background-size        : auto auto;
+  background-clip        : border-box;
+  background-size        : 200% auto;
+  color                  : #fff;
+  background-clip        : text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
-  display: inline-block;
+  animation              : textclip 2s linear infinite;
+  display                : inline-block;
 }
 
 .social_icon {
@@ -98,6 +98,11 @@ body {
   display: none;
 }
 
-.myDIV:hover + .hide {
+.myDIV:hover+.hide {
   display: block;
 }
+
+.send-button-bg {
+  background: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+}
+

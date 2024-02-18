@@ -10,6 +10,7 @@ import { BiHome } from "react-icons/bi";
 import { BiSolidUser } from "react-icons/bi";
 import { BiCube } from "react-icons/bi";
 
+
 const Navbar = () => {
   const [openNav, setOpenNav] = useState<boolean>(false);
   return (
@@ -52,7 +53,10 @@ const Navbar = () => {
         <div className="col-span-8 flex justify-between gap-16 sm:hidden items-center">
           <ul className="text-white list-none flex gap-12 text-slate-400">
             <li>
-              <button>Home</button>
+              <Link href={"/"}>
+                <button>Home</button>
+              </Link>
+
             </li>
 
             <li>
