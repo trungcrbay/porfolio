@@ -106,3 +106,14 @@ body {
   background: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
 }
 
+.transition-splash{
+  transition: opacity 1s;
+}
+
+.navbar_resposive{
+  transform: translateX(100%);
+}
+
+.navbar_transition{
+  transition: transform 0.3s;
+}

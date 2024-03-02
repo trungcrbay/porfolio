@@ -16,7 +16,7 @@ const config: Config = {
       },
     },
     screens: {
-      '2xl': { 'max': '1600px' },
+      '2xl': { 'max': '2000px' },
       // => @media (max-width: 1600px) { ... }
 
       'xl': { 'max': '1279px' },

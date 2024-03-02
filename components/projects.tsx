@@ -4,81 +4,8 @@ import Link from "next/link";
 import "animate.css";
 import { useRouter } from "next/navigation";
 
-const dataProject = [
-  {
-    img: "/project1.jpg",
-    title: "Real Madrid Landing Page",
-    description:
-      "Project summary goes here. Lorem ipsum dolor sit amet,consectetur adipiscing elit. In metus nunc, fringilla ut viverraut, placerat sed nisl. Ut eu nisi ut arcu volutpat vehicula.",
-    techStack: [
-      "/tech-icons/HTML5.svg",
-      "/tech-icons/CSS3.svg",
-      "/tech-icons/JavaScript.svg",
-    ],
-    source: "https://github.com/trungcrbay/Real-Madrid",
-    demo: "https://trungcrbay.github.io/Real-Madrid/",
-  },
-  {
-    img: "/project2.jpg",
-    title: "Book Ecommerce",
-    description:
-      "Project summary goes here. Lorem ipsum dolor sit amet,consectetur adipiscing elit. In metus nunc, fringilla ut viverraut, placerat sed nisl. Ut eu nisi ut arcu volutpat vehicula.",
-    techStack: [
-      "/tech-icons/React.svg",
-      "/tech-icons/Redux.svg",
-      "/tech-icons/Ant Design.svg",
-      "/tech-icons/Vite.js.svg",
-      "/tech-icons/JavaScript.svg",
-      "/tech-icons/Sass.svg",
-    ],
-    source: "https://github.com/trungcrbay/React_ANTD_ECOMMERCE",
-    demo: "https://react-antd-ecommerce.vercel.app/",
-  },
-  {
-    img: "/project3.jpg",
-    title: "Quiz App",
-    description:
-      "Project summary goes here. Lorem ipsum dolor sit amet,consectetur adipiscing elit. In metus nunc, fringilla ut viverraut, placerat sed nisl. Ut eu nisi ut arcu volutpat vehicula.",
-    techStack: [
-      "/tech-icons/Next.js.svg",
-      "/tech-icons/Material UI.svg",
-      "/tech-icons/Sass.svg",
-    ],
-    source: "https://github.com/trungcrbay/QuizApp",
-    demo: "https://quiz-app-9x73.vercel.app/",
-  },
-  {
-    img: "/project4.jpg",
-    title: "Laptop Shop",
-    description:
-      "Project summary goes here. Lorem ipsum dolor sit amet,consectetur adipiscing elit. In metus nunc, fringilla ut viverraut, placerat sed nisl. Ut eu nisi ut arcu volutpat vehicula.",
-    techStack: [
-      "/tech-icons/PHP.svg",
-      "/tech-icons/MySQL.svg",
-      "/tech-icons/Bootstrap.svg",
-      "/tech-icons/HTML5.svg",
-      "/tech-icons/CSS3.svg",
-      "/tech-icons/Javascript.svg",
-    ],
-    source: "https://github.com/trungcrbay/Ecomerce-PHP",
-    demo: "https://quiz-app-9x73.vercel.app/",
-  },
-  {
-    img: "/project5.jpg",
-    title: "Porfolio",
-    description:
-      "Project summary goes here. Lorem ipsum dolor sit amet,consectetur adipiscing elit. In metus nunc, fringilla ut viverraut, placerat sed nisl. Ut eu nisi ut arcu volutpat vehicula.",
-    techStack: [
-      "/tech-icons/Next.js.svg",
-      "/tech-icons/Tailwind CSS.svg",
-      "/tech-icons/CSS3.svg",
-    ],
-    source: "https://github.com/trungcrbay/porfolio",
-    demo: "https://quiz-app-9x73.vercel.app/",
-  },
-];
-
-const Projects = () => {
+const Projects = (props: any) => {
+  const { dataProject } = props;
   const router = useRouter();
 
   return (
@@ -88,8 +15,8 @@ const Projects = () => {
           {dataProject.map((data: any, index: any) => {
             return (
               <div className="flex gap-4 mt-8 mb-8 sm:block relative ">
-                <Image
-                  src={`${data.img}`}
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BACKEND}/images/uploads/${data.image}`}
                   alt={`Project-${index}`}
                   width="0"
                   height="0"
@@ -111,10 +38,10 @@ const Projects = () => {
                   </p>
                   <h3 className="mt-2">Tech Stacks:</h3>
                   <div className="flex gap-2">
-                    {data.techStack.map((tech: any, index: any) => {
+                    {data.techStack.detail.map((tech: any, index: any) => {
                       return (
                         <img
-                          src={`${tech}`}
+                          src={`${process.env.NEXT_PUBLIC_BACKEND}/images/uploads/${tech.path}`}
                           style={{ width: "25px", height: "25px" }}
                         />
                       );

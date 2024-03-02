@@ -1,7 +1,9 @@
 import WrapperContactPage from "@/components/wrapper-contact";
 
 
-const ContactPage = () => {
+const ContactPage = async () => {
+
+
   return (
     <>
       <WrapperContactPage />

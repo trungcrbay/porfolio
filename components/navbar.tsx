@@ -101,36 +101,39 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      {openNav && (
-        <div className="pl-0 pt-0 bg-white fixed top-0 w-40 right-0 h-screen z-50">
-          <IoMdClose
-            className="right-2 top-2 absolute w-8 h-8"
-            onClick={() => setOpenNav(false)}
-          />
-          <ul className="list-none flex flex-col gap-12 text-slate-400 ml-4">
-            <li className="mt-10">
-              <Link href={"/"} className="flex items-center gap-2">
-                <BiHome />
-                <button>Home</button>
-              </Link>
-            </li>
 
-            <li className="">
-              <Link href={"/contact"} className="flex items-center gap-2">
-                <BiSolidUser />
-                <button>About me</button>
-              </Link>
-            </li>
+      <div className={clsx("pl-0 pt-0 bg-white fixed top-0 w-40 right-0 h-screen z-50 hidden sm:block navbar_transition", {
+        "translate-x-0": openNav === true,
+        " navbar_resposive":openNav === false
+      })}>
+        <IoMdClose
+          className="right-2 top-2 absolute w-8 h-8"
+          onClick={() => setOpenNav(false)}
+        />
+        <ul className="list-none flex flex-col gap-12 text-slate-400 ml-4">
+          <li className="mt-10">
+            <Link href={"/"} className="flex items-center gap-2">
+              <BiHome />
+              <button>Home</button>
+            </Link>
+          </li>
 
-            <li className="">
-              <Link href={"/projects"} className=" flex items-center gap-2">
-                <BiCube />
-                <button>Projects</button>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
+          <li className="">
+            <Link href={"/contact"} className="flex items-center gap-2">
+              <BiSolidUser />
+              <button>About me</button>
+            </Link>
+          </li>
+
+          <li className="">
+            <Link href={"/projects"} className=" flex items-center gap-2">
+              <BiCube />
+              <button>Projects</button>
+            </Link>
+          </li>
+        </ul>
+      </div>
+
     </>
   );
 };

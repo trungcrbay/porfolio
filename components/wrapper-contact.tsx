@@ -5,14 +5,14 @@ import MailchimpFormContainer from './mailchimp_sucribes';
 import clsx from "clsx";
 import { ContactContext } from '@/app/providers';
 
-const WrapperContactPage = () => {
+const WrapperContactPage = (props: any) => {
     let { isSubmitContact,setIsSubmitContact } = useContext<any>(ContactContext);
 
     return (
         <div className={clsx("min-h-screen",{
             "opacity-60": isSubmitContact === true,
         })}>
-            <Contact />
+            <Contact/>
             <MailchimpFormContainer />
         </div>
     );

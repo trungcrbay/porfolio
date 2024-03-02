@@ -60,7 +60,9 @@ const Footer = () => {
             <FaPhone />
             <h2>Phone</h2>
           </div>
-          <p className="mt-2 text-base">+84347196217</p>
+          <p className="mt-2 text-base">
+            <a href="tel:+84347196217">+84347196217</a>
+          </p>
         </div>
 
         <div className="col-span-3 sm:col-span-6 mt-2">
@@ -68,7 +70,9 @@ const Footer = () => {
             <IoMdMail />
             <h2>Email</h2>
           </div>
-          <p className="mt-2 sm:w-full sm:hidden">trungnguyenjr123@gmail.com</p>
+          <p className="mt-2 sm:w-full sm:hidden">
+            <a href="mailto:trungnguyenjr123@gmail.com">trungnguyenjr123@gmail.com</a>
+          </p>
           <p className="mt-2 sm:w-full 2xl:hidden sm:block">
             trungnguyenjr123@ gmail.com
           </p>
